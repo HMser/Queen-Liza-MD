@@ -38,7 +38,7 @@ fs.readdirSync("./lib/database/").forEach((plugin) => {
   }
 });
 
-async function Xasena() {
+async function HM() {
   console.log("Syncing Database");
   await config.DATABASE.sync();
 
@@ -80,7 +80,7 @@ const { state, saveState } = await useSingleFileAuthState(
       lastDisconnect.error.output.statusCode != 401
     ) {
       console.log(lastDisconnect.error.output.payload);
-      Xasena();
+      HM();
     }
 
     if (connection === "open") {
@@ -189,5 +189,5 @@ const { state, saveState } = await useSingleFileAuthState(
   });
 }
 setTimeout(() => {
-  Xasena();
+  HM();
 }, 3000);
